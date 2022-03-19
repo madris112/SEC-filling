@@ -27,49 +27,48 @@ const LineChart = (props) => {
   const [chart, setChart] = useState({})
   var data
   if(props.company === 'CIK0000001750'){ //recent to old
-    data=[35000000, 34800000, 34800000, 34500000]
+    data=[51800000, 404700000, 21300000]
   }else if(props.company === 'CIK0000001800'){ 
-    data=[1775000000, 1773000000, 1773000000, 1768000000]
+    data=[9799000000, 6838000000, 3860000000]
   }else if(props.company === 'CIK0000001961'){
-    data=[56814833,
-        53172203,
-        49096460,
-        32339667]
+    data=[342238,
+        474587,
+        1570844
+    ]
   }else if(props.company === 'CIK0000002034'){
-    data=[35216000,
-        32283000,
-        32283000,
-        29110000]
+    data=[41782000,
+        100874000,
+        55680000]
   }
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await fetch(`https://data.sec.gov/api/xbrl/companyconcept/CIK0001708176/us-gaap/LongTermDebt.json`, {
-        method: 'GET',
-        headers: {
-        }
-      })
-        .then((response) => {
-          console.log("api is  accessed")
-            // response.json().then((json) => {
-            //   console.log(json);
-            //   // setChart(json.data)
-            // });
-            console.log(response)
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       await fetch(`https://data.sec.gov/api/xbrl/companyconcept/CIK0001708176/us-gaap/LongTermDebt.json`, {
+//         method: 'GET',
+//         headers: {
+//         }
+//       })
+//         .then((response) => {
+//           console.log("api is  accessed")
+//             // response.json().then((json) => {
+//             //   console.log(json);
+//             //   // setChart(json.data)
+//             // });
+//             console.log(response)
           
-        }).catch((error) => {
-          console.log(error);
-        });
-    };
-    fetchData()
-  }, [])
+//         }).catch((error) => {
+//           console.log(error);
+//         });
+//     };
+//     fetchData()
+//   }, [])
 
   console.log("chart", chart);
 
   var data = {
-    labels: ['2021', '2020', '2019', '2018'],
+    labels: ['2021', '2020', '2019'],
     datasets: [{
-      label: `SAAS Data graph - Asset`,
+      label: `Future Growth Potential - Assets`,
       data: data,
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
