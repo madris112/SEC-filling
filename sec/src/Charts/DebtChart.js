@@ -69,7 +69,7 @@ const LineChart = (props) => {
   var data = {
     labels: ['2021', '2020', '2019', '2018'],
     datasets: [{
-      label: `Future Growth Potential - Debts`,
+      label: `Debts Chart`,
       data: data,
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',

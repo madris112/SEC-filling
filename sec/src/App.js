@@ -16,18 +16,20 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Metric-ify</h1>
+      <h4>Saas goal analyser</h4>
 
-<DropdownButton id="dropdown-basic-button" title="Dropdown button" onSelect={handleselect}>
+<DropdownButton id="dropdown-basic-button" title="Select Company" onSelect={handleselect}>
   <Dropdown.Item eventKey="CIK0000001750">AAR CORP</Dropdown.Item>
   <Dropdown.Item eventKey="CIK0000001800">ABBOTT LABORATORIES</Dropdown.Item>
   <Dropdown.Item eventKey="CIK0000001961">Worlds Inc</Dropdown.Item>
   <Dropdown.Item eventKey="CIK0000002034">Aceto Corp</Dropdown.Item>
 </DropdownButton>
       
+      <FutureGrowth company={cik}/>
       <AssetChart company={cik} />
       <DebtChart company={cik} />
       <CashFlowChart company={cik}/>
-      <FutureGrowth company={cik}/>
     </div>
   );
 }

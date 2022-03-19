@@ -80,7 +80,7 @@ const LineChart = (props) => {
   var data = {
     labels: ['2021', '2020', '2019'],
     datasets: [{
-      label: `Future Growth Potential - Assets`,
+      label: `Future Growth Potential`,
       data: data,
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
