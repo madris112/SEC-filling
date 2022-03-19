@@ -30,7 +30,7 @@ const LineChart = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch(`data.sec.gov/api/xbrl/companyconcept/CIK0001708176/us-gaap/LongTermDebt.json`, {
+      await fetch(`https://cors-anywhere.herokuapp.com/data.sec.gov/api/xbrl/companyconcept/CIK0001708176/us-gaap/LongTermDebt.json`, {
         method: 'GET',
         headers: {
         }
