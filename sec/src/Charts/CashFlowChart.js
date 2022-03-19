@@ -68,7 +68,7 @@ const LineChart = (props) => {
   var data = {
     labels: ['2021', '2020', '2019'],
     datasets: [{
-      label: `Assets Chart`,
+      label: `Cashflow Chart`,
       data: data,
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
