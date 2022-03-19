@@ -27,7 +27,19 @@ const LineChart = (props) => {
   const [chart, setChart] = useState({})
   var data
   if(props.company === 'CIK0000001750'){ //recent to old
-    data=[35000000, ]
+    data=[35000000, 34800000, 34800000, 34500000]
+  }else if(props.company === 'CIK0000001800'){ 
+    data=[1775000000, 1773000000, 1773000000, 1768000000]
+  }else if(props.company === 'CIK0000001961'){
+    data=[56814833,
+        53172203,
+        49096460,
+        32339667]
+  }else if(props.company === 'CIK0000002034'){
+    data=[35216000,
+        32283000,
+        32283000,
+        29110000]
   }
 
   useEffect(() => {
@@ -55,10 +67,10 @@ const LineChart = (props) => {
   console.log("chart", chart);
 
   var data = {
-    labels: ['2017', '2018', '2019', '2020', '2021'],
+    labels: ['2021', '2020', '2019', '2018'],
     datasets: [{
       label: `SAAS Data graph - Asset`,
-      data: [334816, 128492855, 128492855, ,337287911],
+      data: data,
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
