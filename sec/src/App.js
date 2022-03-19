@@ -1,5 +1,5 @@
 import './App.css';
-import LineChart from './Charts/LineChart';
+import LineChart from './Charts/DebtChart';
 
 function App() {
   return (

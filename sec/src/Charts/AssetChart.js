@@ -23,14 +23,16 @@ ChartJS.register(
 );
 
 
-const LineChart = () => {
+const LineChart = (props) => {
   const [chart, setChart] = useState({})
-
-
+  var data
+  if(props.company === 'CIK0000001750'){ //recent to old
+    data=[35000000, ]
+  }
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch(`https://cors-anywhere.herokuapp.com/data.sec.gov/api/xbrl/companyconcept/CIK0001708176/us-gaap/LongTermDebt.json`, {
+      await fetch(`https://data.sec.gov/api/xbrl/companyconcept/CIK0001708176/us-gaap/LongTermDebt.json`, {
         method: 'GET',
         headers: {
         }
@@ -51,11 +53,12 @@ const LineChart = () => {
   }, [])
 
   console.log("chart", chart);
+
   var data = {
-    labels: chart?.coins?.map(x => x.name),
+    labels: ['2017', '2018', '2019', '2020', '2021'],
     datasets: [{
-      label: `${chart?.coins?.length} Coins Available`,
-      data: chart?.coins?.map(x => x.price),
+      label: `SAAS Data graph - Asset`,
+      data: [334816, 128492855, 128492855, ,337287911],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
